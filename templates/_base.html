@@ -13,42 +13,13 @@
       <!--header starts ---------------------------------------->
       <header>
          <div class="main_header_section">
-          {% if user.is_superuser %}
-            id: {{ user.manager_id }}
+          {% if user.is_authenticated %}
             <a href="{% url 'logout' %}">Выйти</a>
+          {% else %}
+            <a href="{% url 'login' %}">Вход</a>
+            <a href="{% url 'signup' %}">Регистрация</a>
           {% endif %}
-           <div class="sib_window">
-             <img class="sib_window_logo" class="profile_images" src="{% static 'img/header/logo.png' %}" alt="Сибирские Окно">
-
-             <div class="sib_window_text">
-               <h3>Сибирское окно</h3>
-               <p>Торгово-производственная компания</p>
-             </div>
-           </div>
-           <div class="header_contacts">
-             <div class="header_contacts_micro_section">
-               <p>Связаться с нами:</p>
-                <span>+7 {{ contacts.main_number }}</span>
-             </div>
-             <div class="header_contacts_micro_section">
-               <p>Адрес:</p>
-               <span>{{ contacts.city }}, {{ contacts.street }}, {{ contacts.building }}</span>
-             </div>
-           </div>
          </div>
-         <hr>
-         <ul class="header_menu">
-             <li class="header_menu_item"><a href="{% url 'home'  %}">Главная</a></li>
-             <li class="header_menu_item"><a href="{% url 'windows'  %}">Окна ПВХ, двери</a></li>
-             <li class="header_menu_item"><a href="{% url 'balconies'  %}">Балконы и лоджии</a></li>
-             <li class="header_menu_item"><a href="{% url 'sidings'  %}">Сайдинг</a></li>
-             <li class="header_menu_item"><a href="{% url 'partitions'  %}">Перегородки</a></li>
-             <li class="header_menu_item"><a href="{% url 'blinds'  %}">Жалюзи</a></li>
-             <li class="header_menu_item"><a href="{% url 'contacts'  %}">Контакты</a></li>
-         </ul>
-         {% if user.is_authenticated %}
-         {% else %}
-         {% endif %}
       </header>
       <!--header stops ---------------------------------------->
 
@@ -61,9 +32,6 @@
       <!--footer starts --------------------------------------->
       <footer>
         <div class="wrapper">
-          <p class="footer_contacts">
-            {{ contacts.postcode }}, {{ contacts.city }}<br>{{ contacts.street }}, {{ contacts.building }}<br>ООО "Сибирское Окно"
-          </p>
         </div>
       </footer>
       <!--footer stops --------------------------------------->
