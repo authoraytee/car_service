@@ -1,0 +1,38 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block additional_media %}
+{% endblock %}
+
+
+{% block content %}
+
+<h1>ВНУТРЕННЯЯ МОЙКА</h1>
+
+            {% if user.is_superuser %}
+                <a class="crud_link create_link" href="{% url 'internal_washing_create' %}">Новый объект</a>
+            {% endif %}
+            <br>
+                <table class="orders_table">
+                    <tr>
+                        <th class="orders_table_cell table_header"></th>
+                        <th class="orders_table_cell table_header">Легковой</th>
+                        <th class="orders_table_cell table_header">Универсал</th>
+                        <th class="orders_table_cell table_header">Паркетник минивэн</th>
+                        <th class="orders_table_cell table_header">Внедорожник</th>
+                        <th class="orders_table_cell table_header">Микроавтобус</th>
+                    </tr>
+                    {% for internal_washing in object_list %}
+                    <tr>
+                        <td class="orders_table_cell table_content">{{ internal_washing.washing_object }}</td>
+                        <td class="orders_table_cell table_content">{{ internal_washing.light_weight_car_price }}</td>
+                        <td class="orders_table_cell table_content">{{ internal_washing.universal_car_price }}</td>
+                        <td class="orders_table_cell table_content">{{ internal_washing.minivan_car_price }}</td>
+                        <td class="orders_table_cell table_content">{{ internal_washing.suv_car_price }}</td>
+                        <td class="orders_table_cell table_content">{{ internal_washing.minibus_car_price }}</td>
+                        <td class="orders_table_cell table_content"><a class="crud_link order_crud edit_link" href="{% url 'internal_washing_update' internal_washing.pk %}">Изменить</a></td>
+                        <td class="orders_table_cell table_content"><a class="crud_link urder_crud delete_link" href="{% url 'internal_washing_delete' internal_washing.pk %}">Удалить</a></td>
+                    </tr>
+                    {% endfor %}
+                </table>
+{% endblock content %}

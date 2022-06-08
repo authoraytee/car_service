@@ -19,10 +19,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'accounts',
+    'accounts', # Модель пользователя
 
-    'catalog',
-    'contacts',
+    # Простые страницы по типу
+    # главной, контактов и "о нас"
+    'simple_pages',
+
+    'car_wash', # Автомойка
+    'auto_parts', # Запчасти 
+    'tire_fitting', # Шиномонтаж
 ]
 
 MIDDLEWARE = [

@@ -12,7 +12,6 @@ class SignupPageView(generic.CreateView):
     template_name = 'registration/signup.html'
 
 
-
 class UserProfile(PermissionRequiredMixin, ListView):
     context_object_name = 'home_list'
     permission_required = 'app.view_event'    

@@ -14,12 +14,24 @@
       <header>
          <div class="main_header_section">
           {% if user.is_authenticated %}
+            <a href="{% url 'user_profile' %}">Профиль</a>
             <a href="{% url 'logout' %}">Выйти</a>
           {% else %}
             <a href="{% url 'login' %}">Вход</a>
             <a href="{% url 'signup' %}">Регистрация</a>
           {% endif %}
          </div>
+
+         <a href="{% url 'home' %}">Главная</a>
+         <a href="{% url 'auto_parts_catalog' %}">Запчасти</a>
+         <a href="{% url 'car_wash_catalog' %}">Автомойка</a>
+         <a href="{% url 'tire_fitting_catalog' %}">Шиномонтаж</a>
+         <a href="{% url 'discounts' %}">Акции</a>
+         <a href="{% url 'contacts' %}">Контакты</a>
+         <a href="{% url 'about' %}">О нас</a>
+
+         {% block second_header %}
+         {% endblock second_header %}
       </header>
       <!--header stops ---------------------------------------->
 

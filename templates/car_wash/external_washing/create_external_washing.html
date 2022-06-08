@@ -1,0 +1,33 @@
+{% extends "_base.html" %}
+
+{% block additional_media %}
+{% endblock %}
+
+
+{% block content %}
+<div class="event_form_main">
+    <div>
+        <h3>Новый object</h3>
+    </div>
+    <div>
+        <form class="event_form_form" method="post">
+            {% csrf_token %}
+            <div>
+                {% for field in form %}
+                <div class="form-group">
+                    <div>{{field}}</div>
+                    {% if field.errors%}
+                    {% for error in field.errors %}
+                    <div class="alert alert-danger">
+                        {{error}}
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            <button type="submit" class="event_form_submit">Create</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

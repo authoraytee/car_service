@@ -49,10 +49,6 @@ button{
 
 /* Header --------------------------------------------*/
 header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     background: #ACACB3;
     padding-top: 25px;
     padding-bottom: 15px;
@@ -62,23 +58,11 @@ header{
 
 
 /* Navigation menu ----------*/
-ul.header_menu{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-li.header_menu_item{
-    margin: 0 35px 0 35px;
-}
 
 
 /* Footer ---------------------------------------------------*/
 footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
     height: 100px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -87,9 +71,4 @@ footer{
 footer > div.wrapper{
     margin-right: 50px;
     background-color: #fff;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
 }
