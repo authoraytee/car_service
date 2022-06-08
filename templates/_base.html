@@ -11,28 +11,53 @@
   </head>
   <body>
       <!--header starts ---------------------------------------->
+      <div class="upper_header">
+        <div class="wrapper">
+          <div class="upper_header_left_section">
+            <p>г. Красноярск</p>
+            <p>mail@mail.ru</p>
+          </div>
+          <div class="upper_header_right_section">
+            {% if user.is_authenticated %}
+              <a href="{% url 'user_profile' %}">Профиль</a>
+              <a href="{% url 'logout' %}">Выйти</a>
+            {% else %}
+              <a href="{% url 'login' %}">Вход</a>
+              <a href="{% url 'signup' %}">Регистрация</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+
       <header>
-         <div class="main_header_section">
-          {% if user.is_authenticated %}
-            <a href="{% url 'user_profile' %}">Профиль</a>
-            <a href="{% url 'logout' %}">Выйти</a>
-          {% else %}
-            <a href="{% url 'login' %}">Вход</a>
-            <a href="{% url 'signup' %}">Регистрация</a>
-          {% endif %}
-         </div>
-
-         <a href="{% url 'home' %}">Главная</a>
-         <a href="{% url 'auto_parts_catalog' %}">Запчасти</a>
-         <a href="{% url 'car_wash_catalog' %}">Автомойка</a>
-         <a href="{% url 'tire_fitting_catalog' %}">Шиномонтаж</a>
-         <a href="{% url 'discounts' %}">Акции</a>
-         <a href="{% url 'contacts' %}">Контакты</a>
-         <a href="{% url 'about' %}">О нас</a>
-
-         {% block second_header %}
-         {% endblock second_header %}
+        <div class="wrapper">
+          <div class="logo_header">
+            <div class="logo">
+              <img src="" alt="" class="logo_img">
+              <p class="logo_name">Лого</p>
+            </div>
+            <p class="phone_number_header">89831608151</p>
+          </div>
+        </div>
       </header>
+
+      <div class="nav_menu">
+        <div class="wrapper">
+          <ul class="nav_menu_list">
+            <li class="nav_menu_list_item"><a href="{% url 'home' %}">Главная</a></li>
+            <li class="nav_menu_list_item"><a href="{% url 'auto_parts_catalog' %}">Запчасти</a></li>
+            <li class="nav_menu_list_item"><a href="{% url 'car_wash_catalog' %}">Автомойка</a></li>
+            <li class="nav_menu_list_item"><a href="{% url 'tire_fitting_catalog' %}">Шиномонтаж</a></li>
+            <li class="nav_menu_list_item"><a href="{% url 'discounts' %}">Акции</a></li>
+            <li class="nav_menu_list_item"><a href="{% url 'contacts' %}">Контакты</a></li>
+            <li class="nav_menu_list_item"><a href="{% url 'about' %}">О нас</a></li>
+          </ul>
+        </div>
+      </div>
+
+      {% block bottom_header_nav %}
+      {% endblock bottom_header_nav %}
       <!--header stops ---------------------------------------->
 
       <!-- all other content ---------------------------------->
