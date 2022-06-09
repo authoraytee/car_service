@@ -1,6 +1,13 @@
+/* FONTS -----------------------------------------*/
+@font-face {
+    font-family: "Golos";
+    src: url("../fonts/Golos-UI_Regular.woff");
+}
+
 /* For-all config ------------------------------*/
 *{
     box-sizing: border-box;
+    font-family: Golos, regular;
 }
 
 body{
@@ -8,6 +15,7 @@ body{
     background: #fff;
     font-family: 'Open Sans', sans-serif;
     width: 100%;
+
 }
 
 h1, h2, h3, h4, h5,
@@ -46,29 +54,152 @@ button{
 }
 
 
+p{
+    display: block;
+}
 
-/* Header --------------------------------------------*/
-header{
-    background: #ACACB3;
-    padding-top: 25px;
-    padding-bottom: 15px;
-
-    margin-bottom: 25px;
+.wrapper{
+    width: 1200px;
 }
 
 
+/* Upper-header --------------------------------------------*/
+div.upper_header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    background: #fff;
+    padding: 15px 0 15px 0;
+
+    border-bottom: 1px solid rgb(202, 202, 202);
+    color: #999999;
+    font-size: 13px;
+}
+
+.upper_header > .wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    justify-content: space-between;
+}
+
+.upper_header > .wrapper > div{
+    display: flex;
+    flex-direction: row;
+}
+
+.upper_header_left_section > p{
+    margin-right: 10px;
+}
+
+.upper_header_right_section > a{
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+/* Header --------------------------------------------*/
+header{
+    background: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+div.logo_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 65px;
+    background: #fff;
+}
 /* Navigation menu ----------*/
+div.nav_menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgb(202, 202, 202);
+
+    background: #fff;
+    color: rgb(53, 53, 53);
+    font-size: 18px;
+    font-weight: 500;
+
+    height: 75px;
+}
+
+div.nav_menu > .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+ul.nav_menu_list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+}
+
+li.nav_menu_list_item{
+    width: 100%;
+    height: 100%;
+}
+
+.nav_menu_list_item > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.nav_menu_list_item > a:hover{
+    transition: 0.2s;
+    background: #4a90e2;
+    color: #ffffff;
+}
 
 
 /* Footer ---------------------------------------------------*/
 footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    height: 100px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    height: 125px;
+    background: #2b2f32;
 }
 
 footer > div.wrapper{
-    margin-right: 50px;
-    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    color: #fff;
+}
+
+div.year_company{
+    display: flex;
+    flex-direction: row;
+}
+
+ul.footer_social{
+    display: flex;
+    flex-direction: row;
+}
+
+
+div.year_company{
+    margin-bottom: 5px;
+}
+div.year_company > p{
+    margin-right: 7px;
 }
