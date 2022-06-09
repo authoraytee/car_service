@@ -1,0 +1,102 @@
+section.car_wash_page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 50px 0 50px 0;
+}
+
+.car_wash_page > .wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+
+button.crud_button,
+a.crud_link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 115px;
+    height: 35px;
+
+    background: rgb(139, 139, 139);
+    border-radius: 3px;
+    color: #fff;
+}
+
+
+a.crud_link.create_new_object_link{
+    width: 145px;
+    height: 45px;
+
+    background: #4a90e2;
+}
+a.crud_link.create_new_object_link:hover{
+    transition: 0.2s;
+    background: #1e6ac0;
+}
+
+
+a.crud_link.edit_object_link{
+    background: #45d837;
+}
+a.crud_link.edit_object_link:hover{
+    background: #25bb18;
+    transition: 0.2s;
+}
+
+
+a.crud_link.delete_object_link{
+    background: #e24a4a;
+}
+a.crud_link.delete_object_link:hover{
+    background: #df2c2c;
+    transition: 0.2s;
+}
+
+
+table.prices_table{
+    margin: 50px 0 25px 0;
+}
+
+th.prices_table_cell.prices_table_headings.wash_prices{
+    font-size: 20px;
+}
+
+.prices_table_cell{
+    padding: 5px 20px 5px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

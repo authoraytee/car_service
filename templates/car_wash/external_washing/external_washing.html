@@ -3,36 +3,41 @@
 
 {% block additional_media %}
     <link href="{% static 'css/car_wash_base.css' %}" rel="stylesheet">
+    <link href="{% static 'css/car_wash_all_pages.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
 
-<h1>ВНЕШНЯЯ МОЙКА</h1>
-
+    <section class="car_wash_page">
+        <div class="wrapper">
+            <h1 class="car_wash_page_heading">Внешняя мойка</h1>
             {% if user.is_superuser %}
-                <a class="crud_link create_link" href="{% url 'external_washing_create' %}">Новый объект</a>
+                <a class="crud_link create_new_object_link" href="{% url 'external_washing_create' %}">Новый объект</a>
             {% endif %}
-            <br>
-                <table class="orders_table">
-                    <tr>
-                        <th class="orders_table_cell table_header"></th>
-                        <th class="orders_table_cell table_header">Легковой</th>
-                        <th class="orders_table_cell table_header">Универсал</th>
-                        <th class="orders_table_cell table_header">Паркетник минивэн</th>
-                        <th class="orders_table_cell table_header">Внедорожник</th>
-                        <th class="orders_table_cell table_header">Микроавтобус</th>
-                    </tr>
-                    {% for external_washing in object_list %}
-                    <tr>
-                        <td class="orders_table_cell table_content">{{ external_washing.washing_object }}</td>
-                        <td class="orders_table_cell table_content">{{ external_washing.light_weight_car_price }}</td>
-                        <td class="orders_table_cell table_content">{{ external_washing.universal_car_price }}</td>
-                        <td class="orders_table_cell table_content">{{ external_washing.minivan_car_price }}</td>
-                        <td class="orders_table_cell table_content">{{ external_washing.suv_car_price }}</td>
-                        <td class="orders_table_cell table_content">{{ external_washing.minibus_car_price }}</td>
-                        <td class="orders_table_cell table_content"><a class="crud_link order_crud edit_link" href="{% url 'external_washing_update' external_washing.pk %}">Изменить</a></td>
-                        <td class="orders_table_cell table_content"><a class="crud_link urder_crud delete_link" href="{% url 'external_washing_delete' external_washing.pk %}">Удалить</a></td>
-                    </tr>
-                    {% endfor %}
-                </table>
+            <table class="prices_table">
+                <tr>
+                    <th class="prices_table_cell prices_table_headings wash_prices">Цены на мойку</th>
+                    <th class="prices_table_cell prices_table_headings">Легковой</th>
+                    <th class="prices_table_cell prices_table_headings">Универсал</th>
+                    <th class="prices_table_cell prices_table_headings">Паркетник минивэн</th>
+                    <th class="prices_table_cell prices_table_headings">Внедорожник</th>
+                    <th class="prices_table_cell prices_table_headings">Микроавтобус</th>
+                </tr>
+                {% for external_washing in object_list %}
+                <tr>
+                    <td class="prices_table_cell prices_table_prices">{{ external_washing.washing_object }}</td>
+                    <td class="prices_table_cell prices_table_prices">{{ external_washing.light_weight_car_price }}</td>
+                    <td class="prices_table_cell prices_table_prices">{{ external_washing.universal_car_price }}</td>
+                    <td class="prices_table_cell prices_table_prices">{{ external_washing.minivan_car_price }}</td>
+                    <td class="prices_table_cell prices_table_prices">{{ external_washing.suv_car_price }}</td>
+                    <td class="prices_table_cell prices_table_prices">{{ external_washing.minibus_car_price }}</td>
+                    {% if user.is_superuser %}
+                        <td><a class="crud_link edit_object_link" href="{% url 'external_washing_update' external_washing.pk %}">Изменить</a></td>
+                        <td><a class="crud_link delete_object_link" href="{% url 'external_washing_delete' external_washing.pk %}">Удалить</a></td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </section>
 {% endblock content %}
