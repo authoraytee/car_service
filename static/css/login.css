@@ -1,0 +1,108 @@
+section.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 50px 0 50px 0; 
+}
+
+section.login > div.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 500px;
+    width: 500px;
+
+    background: #eef6ff;
+    border: 2px solid #50a2ff;
+    border-radius: 20px;
+}
+
+section.login > div.wrapper.signup_wrapper{
+    width: 900px;
+}
+
+
+h2.login_heading{
+    margin-bottom: 75px;
+}
+
+form.sign_in_register_form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+form.sign_in_register_form > p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+tr{
+    display: flex;
+    flex-direction: column;
+}
+
+form.sign_in_register_form > p > input,
+td.input_form > input{
+    width: 200px;
+    height: 30px;
+    margin: 5px 0 5px 0;
+
+    padding-left: 10px;
+    background: rgb(255, 255, 255);
+
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 5px;
+}
+
+td.input_form > input:focus{
+    color: #212529;
+    background-color: #fff;
+    border-color: #bdbdbd;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+}
+
+button.submit_login_register_button,
+input.submit_login_register_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin-top: 35px;
+    padding: 15px 50px 15px 50px;
+
+    background: rgb(139, 139, 139);
+    border: none;
+    border-radius: 5px;
+    background: #4a90e2;
+    color: #fff;
+    cursor: pointer;
+}
+
+input.submit_login_register_button:hover{
+    transition: 0.2s;
+    background: #1e6ac0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

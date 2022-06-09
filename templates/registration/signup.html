@@ -1,11 +1,27 @@
-{% extends '_base.html' %}
+{% extends "_base.html" %}
+{% load static %}
 
-{% block title %}Sign Up{% endblock title %}
+{% block additional_media %}
+    <link href="{% static 'css/home.css' %}" rel="stylesheet">
+    <link href="{% static 'css/login.css' %}" rel="stylesheet">
+{% endblock %}
 
 {% block content %}
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Зарегистрироваться</button>
-    </form>
-{% endblock content %}
+  <section class="login">
+    <div class="wrapper signup_wrapper">
+      <h2 class="login_heading">Зарегистрироваться</h2>
+      {% if form.errors %}
+        <p>Имя пользователя или пароль не верны!</p>
+      {% endif %}
+      {% if user.is_authenticated %}
+        <h4>Вы уже вошли в аккаунт!</h4>
+        {% else %}
+            <form сlass="sign_in_register_form"  method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="submit_login_register_button" type="submit">Зарегистрироваться</button>
+            </form>
+        {% endif %}
+    </div>
+  </section>
+{% endblock %}
