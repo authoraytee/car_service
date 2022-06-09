@@ -6,6 +6,10 @@ section.crud_object_section{
     margin: 50px 0 50px 200px;
 }
 
+.crud_object_section > .wrapper > h1{
+    margin-bottom: 10px;
+}
+
 h1.crud_heading{
     margin-bottom: 25px;
 }
@@ -49,14 +53,66 @@ button.crud_button{
     width: 200px;
     height: 65px;
 
-    background: #25bb18;
     border-radius: 3px;
     font-size: 20px;
     font-weight: 600;
     color: #fff;
 }
 
-button.crud_button:hover{
+/* Создание --------------------------------------------*/
+
+button.crud_button.crud_button_create{
+    background: #25bb18;
+}
+
+button.crud_button.crud_button_create:hover{
     transition: 0.2s;
     background: #1d9412;
 }
+
+/* Удаление --------------------------------------------*/
+
+button.crud_button.crud_button_delete{
+    background: #e24a4a;
+}
+
+button.crud_button.crud_button_delete:hover{
+    transition: 0.2s;
+    background: #df2c2c;
+}
+
+div.crud_body{
+    margin-top: 35px;
+}
+
+li.object_info_list_item{
+    margin-bottom: 10px;
+}
+
+.object_info_list_item > h3{
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

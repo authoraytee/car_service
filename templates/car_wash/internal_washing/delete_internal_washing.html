@@ -3,14 +3,49 @@
 
 {% block additional_media %}
     <link href="{% static 'css/car_wash_base.css' %}" rel="stylesheet">
+    <link href="{% static 'css/car_wash_all_pages.css' %}" rel="stylesheet">
+    <link href="{% static 'css/crud.css' %}" rel="stylesheet">
 {% endblock %}
 
+
 {% block content %}
-
-<form  method="post">
-    {% csrf_token %}
-        Are you sure you want to delete this что?
-        <input  type="submit"  value="Submit"  />
-</form>
-
-{% endblock content %}
+    <section class="crud_object_section">
+        <div class="wrapper">
+            <h1>ВНУТРЕННЯЯ МОЙКА</h1>
+            <h1 class="crud_heading">Удалить объект?</h1>
+            <div class="crud_body">
+                <form class="crud_form" method="POST">
+                    {% csrf_token %}
+                    <ul class="object_info_list">
+                        <li class="object_info_list_item">
+                            <p>Объект мойки:</h>
+                            <h3>{{ object.washing_object }}</>
+                        </li>
+                        <li class="object_info_list_item">
+                            <p>Цена для легкового автомобиля:</h>
+                            <h3>{{ object.light_weight_car_price }}</>
+                        </li>
+                        <li class="object_info_list_item">
+                            <p>Цена для универсала:</h>
+                            <h3>{{ object.universal_car_price }}</>
+                        </li>
+                        <li class="object_info_list_item">
+                            <p>Цена для минивэна:</h>
+                            <h3>{{ object.minivan_car_price }}</>
+                        </li>
+                        <li class="object_info_list_item">
+                            <p>Цена для внедорожника:</h>
+                            <h3>{{ object.suv_car_price }}</>
+                        </li>
+                        <li class="object_info_list_item">
+                            <p>Цена для микроавтобуса:</h>
+                            <h3>{{ object.minibus_car_price }}</>
+                        </li>
+                    </ul>
+        
+                    <button type="submit" class="crud_button crud_button_delete">Удалить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}
