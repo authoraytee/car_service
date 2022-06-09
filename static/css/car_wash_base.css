@@ -1,11 +1,13 @@
+/* Второе навигационное меню -------------------------------*/
 div.nav_menu_bottom{
     display: flex;
     align-items: center;
     justify-content: center;
 
     background: #4a90e2;
-    height: 50px;
-    border-top: 2px solid #4686cf;
+    height: 58px;
+    font-size: 17px;
+    color: rgb(236, 236, 236);
 }
 
 div.nav_menu_bottom > .wrapper{
@@ -34,7 +36,100 @@ li.nav_menu_bottom_list_item{
     align-items: center;
     justify-content: center;
     height: 100%;
-
-    font-size: 15px;
-    color: rgb(236, 236, 236);
 }
+
+.nav_menu_bottom_list_item > a:hover{
+    transition: 0.2s;
+    background: #1e6ac0;
+    color: #ffffff;
+}
+
+/* Основной контент -------------------------------------*/
+section.main_catalog_section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin: 50px 0 75px 0 ;
+}
+
+.main_catalog_section > .wrapper{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1.section_heading_text{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+ul.main_catalog_list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-top: 35px;
+}
+
+li.main_catalog_list_item{
+    display: flex;
+    align-items: end;
+    justify-content: start;
+
+    padding: 0 0 25px 25px;
+
+    height: 275px;
+    width: 275px;
+}
+
+
+.external_wah_catalog_list_item{
+    background: url("/static/img/car_wash_catalog/external_car_wash.jpg") 50% 0 no-repeat;
+    background-size: 550px 275px;
+}
+.internal_wash_catalog_list_item{
+    background: url("/static/img/car_wash_catalog/internal_car_wash.jpg") 50% 0 no-repeat;
+    background-size: 400px 275px;
+}
+.polishing_catalog_list_item{
+    background: url("/static/img/car_wash_catalog/car_polishing.jpg") 50% 0 no-repeat;
+    background-size: 400px 275px;
+}
+.dry_wash_catalog_list_item{
+    background: url("/static/img/car_wash_catalog/dry_washing.jpg") 50% 0 no-repeat;
+    background-size: 425px 275px;
+}
+
+.main_catalog_list_item > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 175px;
+    padding: 10px 0 10px 0;
+    background: #4a90e2;
+    
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(243, 243, 243);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

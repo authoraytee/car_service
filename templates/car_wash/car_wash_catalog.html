@@ -20,6 +20,22 @@
 {% endblock bottom_header_nav %}
 
 {% block content %}
-    Каталог автомоки
+    <section class="main_catalog_section">
+        <div class="wrapper">
+            <h1 class="section_heading_text">Автомойка</h1>
+            <p class="section_description">Если Вам нужна качественная мойка Вашего автомобиля, 
+                химчистка салона, полировка кузова, обработка воском – заезжайте в 
+                автокомплекс «Покровский». Обращаясь к нам, Вы получаете услуги лучшего 
+                качества и гарантию безопасности Вашего автомобиля. 
+                Вы можете смело оставлять ваше авто у нас, а сами спокойно заниматься 
+                своими делами, пока наши мастера занимаются Вашим транспортным средством.</p>
+            <ul class="main_catalog_list">
+                <li class="main_catalog_list_item external_wah_catalog_list_item"><a href="{% url 'external_washing' %}">Внешняя мойка</a></li>
+                <li class="main_catalog_list_item internal_wash_catalog_list_item"><a href="{% url 'internal_washing' %}">Внутренняя мойка</a></li>
+                <li class="main_catalog_list_item polishing_catalog_list_item"><a href="{% url 'polishing' %}">Полировка</a></li>
+                <li class="main_catalog_list_item dry_wash_catalog_list_item"><a href="{% url 'dry_cleaning' %}">Химчистка</a></li>
+            </ul>
+        </div>
+    </section>
 
 {% endblock content %}
