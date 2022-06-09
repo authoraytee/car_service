@@ -34,6 +34,8 @@ a.crud_link.create_new_object_link{
     width: 145px;
     height: 45px;
 
+    margin-top: 25px;
+
     background: #4a90e2;
 }
 a.crud_link.create_new_object_link:hover{
