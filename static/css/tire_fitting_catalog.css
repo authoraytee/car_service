@@ -1,0 +1,79 @@
+/* Основной контент -------------------------------------*/
+section.main_catalog_section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin: 50px 0 75px 0 ;
+}
+
+.main_catalog_section > .wrapper{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1.section_heading_text{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+ul.main_catalog_list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    width: 100%;
+    margin-top: 35px;
+}
+
+li.main_catalog_list_item{
+    display: flex;
+    align-items: end;
+    justify-content: start;
+
+    padding: 0 0 25px 25px;
+    margin-bottom: 30px;
+
+    height: 275px;
+    width: 275px;
+}
+
+
+.lightweight_car_catalog_list_item{
+    background: url("/static/img/tire_fitting_catalog/tire_fitting1.jpg") 50% 0 no-repeat;
+    background-size: 275px 275px;
+}
+.suv_car_catalog_list_item{
+    background: url("/static/img/tire_fitting_catalog/tire_fitting2.jpg") 50% 0 no-repeat;
+    background-size: 500px 275px;
+}
+.minibus_catalog_list_item{
+    background: url("/static/img/tire_fitting_catalog/tire_fitting3.jpg") 50% 0 no-repeat;
+    background-size: 500px 275px;
+}
+.tire_change_catalog_list_item{
+    background: url("/static/img/tire_fitting_catalog/tire_fitting4.jpg") 50% 0 no-repeat;
+    background-size: 425px 275px;
+}
+.tire_fixing_catalog_list_item{
+    background: url("/static/img/tire_fitting_catalog/tire_fitting5.jpg") 50% 0 no-repeat;
+    background-size: 425px 275px;
+}
+
+.main_catalog_list_item > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 12px 23px 12px 23px;
+    background: #4a90e2;
+    
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(243, 243, 243);
+}

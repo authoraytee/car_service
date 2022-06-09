@@ -1,23 +1,26 @@
 from django.shortcuts import render
-from django.views.generic import ListView, CreateView, UpdateView, DeleteView
-from django.urls import reverse_lazy
-
-# from .models import (
-#     ExternalWashing,
-#     InternalWashing,
-#     Polishing,
-#     DryCleaning,
-# )
-
-ALL_MODELS_FIELDS = [
-            'washing_object',
-            'light_weight_car_price', 
-            'universal_car_price', 
-            'minivan_car_price',
-            'suv_car_price', 
-            'minibus_car_price', 
-        ]
 
 
 def TireFittingCatalogView(request):
     return render(request,'tire_fitting/tire_fitting_catalog.html')
+
+
+def ChangeTireCatalogView(request):
+    return render(request,'tire_fitting/change_tire.html')
+
+
+def FixTireCatalogView(request):
+    return render(request,'tire_fitting/fix_tire.html')
+
+
+def LightweightCarsCatalogView(request):
+    return render(request,'tire_fitting/lightweight_cars.html')
+
+
+def MinubusesCatalogView(request):
+    return render(request,'tire_fitting/minibuses.html')
+
+
+def SuvCatalogView(request):
+    return render(request,'tire_fitting/suv.html')
+

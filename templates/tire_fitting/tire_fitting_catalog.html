@@ -3,10 +3,28 @@
 
 {% block additional_media %}
     <link href="{% static 'css/home.css' %}" rel="stylesheet">
+    <link href="{% static 'css/tire_fitting_catalog.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
-    Шиномонтаж
-
+    <section class="main_catalog_section">
+        <div class="wrapper">
+            <h1 class="section_heading_text">Шиномонтаж </h1>
+            <p class="section_description">В наше время шиномонтажные услуги предоставляют повсеместно, 
+                чуть ни через каждые 100-200 метров. Но не каждая автомастерская может предложить 
+                качественный уровень сервиса, удобства при ожидании. Особенно спрос на шиномонтаж 
+                повышен во время сезонной плановой смены резины, да и в остальное время есть риск 
+                получить прокол.  Если Вы хотите произвести плановую смену резины, то лучше заранее 
+                позаботиться об этой процедуре. Звоните в наш автокомплекс и записывайтесь на удобное 
+                для Вас время.</p>
+            <ul class="main_catalog_list">
+                <li class="main_catalog_list_item lightweight_car_catalog_list_item"><a href="{% url 'lightweight_cars' %}">Легковые автомобили</a></li>
+                <li class="main_catalog_list_item suv_car_catalog_list_item"><a href="{% url 'suv' %}">Внедорожники и джипы</a></li>
+                <li class="main_catalog_list_item minibus_catalog_list_item"><a href="{% url 'minibuses' %}">Микроавтобусы</a></li>
+                <li class="main_catalog_list_item tire_change_catalog_list_item"><a href="{% url 'change_tire' %}">Смена шин</a></li>
+                <li class="main_catalog_list_item tire_fixing_catalog_list_item"><a href="{% url 'fix_tire' %}">Ремонт шин</a></li>
+            </ul>
+        </div>
+    </section>
 
 {% endblock content %}
