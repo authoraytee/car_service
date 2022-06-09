@@ -2,34 +2,38 @@
 {% load static %}
 
 {% block additional_media %}
-    <link href="{% static 'css/car_wash_base.css' %}" rel="stylesheet">
+    <link href="{% static 'css/car_wash_catalog.css' %}" rel="stylesheet">
+    <link href="{% static 'css/car_wash_all_pages.css' %}" rel="stylesheet">
+    <link href="{% static 'css/crud.css' %}" rel="stylesheet">
 {% endblock %}
 
-{% block content %}
-<div class="event_form_main">
-    <div>
-        <h3>dd</h3>
-    </div>
-    <div>
-        <form class="event_form_form" method="post">
-            {% csrf_token %}
 
-            <div>
-                {% for field in form %}
-                <div class="form-group">
-                    <div>{{field}}</div>
-                    {% if field.errors%}
-                    {% for error in field.errors %}
-                    <div class="alert alert-danger">
-                        {{error}}
+{% block content %}
+    <section class="crud_object_section">
+        <div class="wrapper">
+            <h1>ВНЕШНЯЯ МОЙКА</h1>
+            <h1 class="crud_heading">Создать новый объект</h1>
+            <div class="crud_body">
+                <form class="crud_form" method="POST">
+                    {% csrf_token %}
+                    <div>
+                        {% for field in form %}
+                        <div class="form_group">
+                            {{ field.label_tag }}
+                            <div class="field">{{ field }}</div>
+                            {% if field.errors%}
+                            {% for error in field.errors %}
+                            <div class="alert alert_danger">
+                                {{error}}
+                            </div>
+                            {% endfor %}
+                            {% endif %}
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
-                    {% endif %}
-                </div>
-                {% endfor %}
+                    <button type="submit" class="crud_button crud_button_edit">Изменить</button>
+                </form>
             </div>
-            <button type="submit" class="event_form_submit">update</button>
-        </form>
-    </div>
-</div>
+        </div>
+    </section>
 {% endblock %}

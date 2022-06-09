@@ -59,8 +59,8 @@ button.crud_button{
     color: #fff;
 }
 
-/* Создание --------------------------------------------*/
 
+/* Создание --------------------------------------------*/
 button.crud_button.crud_button_create{
     background: #25bb18;
 }
@@ -70,8 +70,8 @@ button.crud_button.crud_button_create:hover{
     background: #1d9412;
 }
 
-/* Удаление --------------------------------------------*/
 
+/* Удаление --------------------------------------------*/
 button.crud_button.crud_button_delete{
     background: #e24a4a;
 }
@@ -94,6 +94,15 @@ li.object_info_list_item{
 }
 
 
+/* Изменение --------------------------------------------*/
+button.crud_button.crud_button_edit{
+    background: #4a90e2;
+}
+
+button.crud_button.crud_button_edit:hover{
+    transition: 0.2s;
+    background: #1e6ac0;
+}
 
 
 
