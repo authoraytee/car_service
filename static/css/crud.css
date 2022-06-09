@@ -1,0 +1,62 @@
+section.crud_object_section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 50px 0 50px 200px;
+}
+
+h1.crud_heading{
+    margin-bottom: 25px;
+}
+
+div.crud_body{
+    margin-left: 45px;
+}
+
+div.form_group{
+    margin-top: 20px;
+}
+
+div.form_group > label{
+    color: rgb(43, 43, 43);
+}
+
+div.field > input{
+    width: 250px;
+    height: 35px;
+    margin-top: 5px;
+
+    padding-left: 10px;
+    background: rgb(238, 238, 238);
+
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 5px;
+}
+
+
+div.field > input:focus{
+    color: #212529;
+    background-color: #fff;
+    border-color: #bdbdbd;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+}
+
+button.crud_button{
+    margin-top: 25px;
+    margin-left: 30px;
+    width: 200px;
+    height: 65px;
+
+    background: #25bb18;
+    border-radius: 3px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+
+button.crud_button:hover{
+    transition: 0.2s;
+    background: #1d9412;
+}
