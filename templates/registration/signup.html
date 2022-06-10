@@ -10,9 +10,6 @@
   <section class="login">
     <div class="wrapper signup_wrapper">
       <h2 class="login_heading">Зарегистрироваться</h2>
-      {% if form.errors %}
-        <p>Имя пользователя или пароль не верны!</p>
-      {% endif %}
       {% if user.is_authenticated %}
         <h4>Вы уже вошли в аккаунт!</h4>
         {% else %}

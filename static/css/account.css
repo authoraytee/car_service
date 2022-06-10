@@ -1,0 +1,44 @@
+section.your_account_section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0 50px 85px;
+}
+
+a.crud_link.create_new_object_link{
+    width: 200px;
+}
+
+div.cars_catalog{
+    margin-top: 25px;
+}
+
+ul.car{
+    width: 1100px;
+    padding: 25px 0 25px 30px;
+    border-radius: 10px;
+    background: rgb(219, 246, 250);
+}
+
+li.cars_list_item{
+    display: flex;
+    flex-direction: row;
+}
+
+li.crud_list_item{
+    margin-top: 15px;
+}
+
+.cars_list_item > a, p{
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+

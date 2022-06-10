@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'car_wash', # Автомойка
     'auto_parts', # Запчасти 
     'tire_fitting', # Шиномонтаж
+    'user_auto', # Машина пользователя
 ]
 
 MIDDLEWARE = [

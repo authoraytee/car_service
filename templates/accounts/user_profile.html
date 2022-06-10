@@ -1,7 +1,56 @@
 {% extends '_base.html' %}
- 
+{% load static %}
+
+{% block additional_media %}
+    <link href="{% static 'css/car_wash_all_pages.css' %}" rel="stylesheet">
+    <link href="{% static 'css/account.css' %}" rel="stylesheet">
+
+{% endblock %}
+
 {% block content %}
-    <h2>Your account</h2>
-    <p>Hello, {{ user.username }}</p>
+
+    <section class="your_account_section">
+        <div class="wrapper">
+            <h1 class="heading">Ваш профиль</h1>
+            <p class="hello">Привет, {{ user.username }}</p>
+            <a href="{% url 'car_create' %}" class="crud_link create_new_object_link">Прикрепить автомобиль</a>
+            {% for user_car in user_cars %}
+                {% if user_car.owner == current_user %}
+                    <div class="cars_catalog">
+                        <ul class="car">
+                            <li class="cars_list_item">
+                                <p>Марка:</p>
+                                <h3>{{ user_car.brand }}</h3>
+                            </li>
+                            <li class="cars_list_item">
+                                <p>Модель:</p>
+                                <h3>{{ user_car.model }}</h3>
+                            </li>
+                            <li class="cars_list_item">
+                                <p>Двигатель:</p>
+                                <h3>{{ user_car.engine }}</h3>
+                            </li>
+                            <li class="cars_list_item">
+                                <p>Коробка передач:</p>
+                                <h3>{{ user_car.transmission }}</h3>
+                            </li>
+                            <li class="cars_list_item">
+                                <p>Руль:</p>
+                                <h3>{{ user_car.steering_wheel }}</h3>
+                            </li>
+                            <li class="cars_list_item">
+                                <p>Привод:</p>
+                                <h3>{{ user_car.wheel_drive_type }}</h3>
+                            </li>
+                            <li class="cars_list_item crud_list_item">
+                                <a class="crud_link edit_object_link" href="{% url 'car_update' user_car.pk %}">Изменить</a>
+                                <a class="crud_link delete_object_link" href="{% url 'car_delete' user_car.pk %}">Удалить</a>
+                            </li>
+                        </ul>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </section>
 
 {% endblock content %}

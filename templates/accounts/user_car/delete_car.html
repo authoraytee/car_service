@@ -1,0 +1,50 @@
+{% extends 'second_header_base.html' %}
+{% load static %}
+
+{% block additional_media %}
+    <link href="{% static 'css/car_wash_catalog.css' %}" rel="stylesheet">    
+    <link href="{% static 'css/car_wash_all_pages.css' %}" rel="stylesheet">
+    <link href="{% static 'css/crud.css' %}" rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+    <section class="crud_object_section">
+        <div class="wrapper">
+            <h1>Удалить машину?</h1>
+            <div class="crud_body">
+                <form class="crud_form" method="POST">
+                    {% csrf_token %}
+                    <ul class="object_info_list">
+                        <li class="object_info_list_item">
+                            <p>Марка:</h>
+                            <h3>{{ object.brand }}</>
+                        </li>
+                        <li class="object_info_list_item">
+                            <p>Модель:</h>
+                            <h3>{{ object.model }}</>
+                        </li>
+                        <li class="object_info_list_item">
+                            <p>Движок:</h>
+                            <h3>{{ object.engine }}</>
+                        </li>
+                        <li class="object_info_list_item">
+                            <p>Коробка передач:</h>
+                            <h3>{{ object.transmission }}</>
+                        </li>
+                        <li class="object_info_list_item">
+                            <p>Руль:</h>
+                            <h3>{{ object.steering_wheel }}</>
+                        </li>
+                        <li class="object_info_list_item">
+                            <p>Привод:</h>
+                            <h3>{{ object.wheel_drive_type }}</>
+                        </li>
+                    </ul>
+        
+                    <button type="submit" class="crud_button crud_button_delete">Удалить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}
