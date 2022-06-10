@@ -1,0 +1,26 @@
+section.autoparts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 25px 0 50px 0;
+}
+
+
+h1.heading{
+    margin-bottom: 25px;
+}
+
+
+p.content{
+    font-size: 18px;
+    margin: 10px 0 10px 0;
+}
+
+
+a.login_profile_link_autoparts{
+    padding: 12px 25px 12px 25px;
+    border-radius: 5px;
+    background: #4a90e2;
+    color:#fff;
+}

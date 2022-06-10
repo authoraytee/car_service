@@ -1,0 +1,29 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block additional_media %}
+    <link href="{% static 'css/home.css' %}" rel="stylesheet">
+    <link href="{% static 'css/auto_parts.css' %}" rel="stylesheet">
+
+{% endblock %}
+
+
+{% block content %}
+    <section class="autoparts">
+        <div class="wrapper">
+            <h1 class="heading">Заказ автозапчастей</h1>
+
+            <p class="content">Наши опытные специалисты легко подберут для Вашего автомобиля любые запчасти от разных производителей.</p>
+            <p class="content">Вам лишь нужно добавить ваш автомобиль в профиле!</p>
+
+            <br>
+            
+            {% if user.is_authenticated %}
+              <a class="login_profile_link_autoparts" href="{% url 'user_profile' %}">Профиль</a>
+            {% else %}
+              <a class="login_profile_link_autoparts" href="{% url 'login' %}">Вход</a>
+            {% endif %}
+        </div>
+    </section>
+
+{% endblock content %}
