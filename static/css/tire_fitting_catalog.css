@@ -44,15 +44,7 @@ li.main_catalog_list_item{
 }
 
 
-.lightweight_car_catalog_list_item{
-    background: url("/static/img/tire_fitting_catalog/tire_fitting1.jpg") 50% 0 no-repeat;
-    background-size: 275px 275px;
-}
-.suv_car_catalog_list_item{
-    background: url("/static/img/tire_fitting_catalog/tire_fitting2.jpg") 50% 0 no-repeat;
-    background-size: 500px 275px;
-}
-.minibus_catalog_list_item{
+.all_cars_catalog_list_item{
     background: url("/static/img/tire_fitting_catalog/tire_fitting3.jpg") 50% 0 no-repeat;
     background-size: 500px 275px;
 }

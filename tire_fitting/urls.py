@@ -4,9 +4,7 @@ from .views import ( # Шиномонтаж
     TireFittingCatalogView,
     ChangeTireCatalogView,
     FixTireCatalogView,
-    LightweightCarsCatalogView,
-    MinubusesCatalogView,
-    SuvCatalogView,
+    AllCarsCatalogView,
 )
 
 
@@ -14,9 +12,7 @@ urlpatterns = [
     # Домашняя страница каталога шиномонтажа
     path('', TireFittingCatalogView, name='tire_fitting_catalog'),
 
+    path('all_cars/', AllCarsCatalogView, name='all_cars'),
     path('change_tire/', ChangeTireCatalogView, name='change_tire'),
     path('fix_tire/', FixTireCatalogView, name='fix_tire'),
-    path('lightweight_cars/', LightweightCarsCatalogView, name='lightweight_cars'),
-    path('minibuses/', MinubusesCatalogView, name='minibuses'),
-    path('suv/', SuvCatalogView, name='suv'),
 ]

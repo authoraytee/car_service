@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+{% load static %}
+
+
+{% block bottom_header_nav %}
+    <div class="nav_menu_bottom">
+        <div class="wrapper">
+            <ul class="nav_menu_bottom_list">
+                <li class="nav_menu_bottom_list_item"><a href="{% url 'all_cars' %}">Все автомобили</a></li>
+                <li class="nav_menu_bottom_list_item"><a href="{% url 'change_tire' %}">Смена шин</a></li>
+                <li class="nav_menu_bottom_list_item"><a href="{% url 'fix_tire' %}">Ремонт шин</a></li>
+            </ul>
+        </div>
+    </div>
+{% endblock bottom_header_nav %}

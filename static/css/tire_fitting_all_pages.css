@@ -1,0 +1,38 @@
+section.tire_fitting_page_section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 50px 0 50px 0;
+}
+
+h1.heading{
+    margin-bottom: 25px;
+}
+
+h4.our_services{
+    font-size: 23px;
+    margin: 20px 0 20px 0;
+}
+
+ul.secvices_list{
+    list-style-type:disc;
+}
+
+li.services_list_item{
+    margin-left: 50px;
+    font-size: 20px;
+    color: #3173be;
+}  
+
+
+li.services_list_item > span{
+    color: #000;
+}
+
+/* Смена шин ---------------------------*/
+
+p.content{
+    font-size: 18px;
+    margin: 10px 0 10px 0;
+}

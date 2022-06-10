@@ -6,19 +6,6 @@
     <link href="{% static 'css/car_wash_catalog.css' %}" rel="stylesheet">
 {% endblock %}
 
-{% block bottom_header_nav %}
-    <div class="nav_menu_bottom">
-        <div class="wrapper">
-            <ul class="nav_menu_bottom_list">
-                <li class="nav_menu_bottom_list_item"><a href="{% url 'external_washing' %}">Внешняя мойка</a></li>
-                <li class="nav_menu_bottom_list_item"><a href="{% url 'internal_washing' %}">Внутрення мойка</a></li>
-                <li class="nav_menu_bottom_list_item"><a href="{% url 'polishing' %}">Полировка</a></li>
-                <li class="nav_menu_bottom_list_item"><a href="{% url 'dry_cleaning' %}">Химчистка</a></li>
-            </ul>
-        </div>
-    </div>
-{% endblock bottom_header_nav %}
-
 {% block content %}
     <section class="main_catalog_section">
         <div class="wrapper">

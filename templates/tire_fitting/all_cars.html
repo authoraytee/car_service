@@ -1,0 +1,28 @@
+{% extends 'tire_fitting_second_header_base.html' %}
+{% load static %}
+
+{% block additional_media %}
+    <link href="{% static 'css/home.css' %}" rel="stylesheet">
+    <link href="{% static 'css/tire_fitting_catalog.css' %}" rel="stylesheet">
+    <link href="{% static 'css/car_wash_catalog.css' %}" rel="stylesheet">
+    <link href="{% static 'css/tire_fitting_all_pages.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <section class="tire_fitting_page_section">
+        <div class="wrapper">
+            <h1 class="heading">Шиномонтаж автомобилей</h1>
+            <h4 class="our_services">Наш сервис может предложить вам большой спектр услуг шиномонтажа:</h4>
+            <ul class="secvices_list">
+                <li class="services_list_item"><span>cезонная замена резины (снятие и монтаж шин, балансировка колес);</span></li>
+                <li class="services_list_item"><span>ремонт проколов, боковых порезов и грыж шин;</span></li>
+                <li class="services_list_item"><span>снятие, монтаж покрышек;</span></li>
+                <li class="services_list_item"><span>балансировка колес;</span></li>
+                <li class="services_list_item"><span>проверка давления в шинах;</span></li>
+                <li class="services_list_item"><span>покраска дисков;</span></li>
+                <li class="services_list_item"><span>полировка дисков.</span></li>
+            </ul>
+        </div>
+    </section>
+
+{% endblock content %}
