@@ -1,0 +1,47 @@
+section.contacts_section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 85px;
+}
+
+h1.heading{
+    margin-bottom: 15px;
+}
+
+li.contact_list_item{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin: 25px 0 25px 0 ;
+}
+
+.contact_list_item > div{
+    margin-left: 25px;
+}
+
+.contact_list_item > div > h3{
+    margin-bottom: 7px;
+    font-size: 20px;
+}
+.contact_list_item > div > p{
+    margin-bottom: 5px;
+}
+
+img.contact_label{
+    height: 75px;
+    width: auto;
+}
+
+div.opening_dates{
+    display: flex;
+    flex-direction: row;
+}
+
+.opening_dates > ul{
+    margin-right: 15px;
+}

@@ -3,10 +3,47 @@
 
 {% block additional_media %}
     <link href="{% static 'css/home.css' %}" rel="stylesheet">
+    <link href="{% static 'css/contacts.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
-    Контакты
 
-
+    <section class="contacts_section">
+        <div class="wrapper">
+            <h1 class="heading">Контактная информация</h1>
+            <ul class="contacts_list">
+                <li class="contact_list_item">
+                    <img class="contact_label" src="{% static 'img/contacts/location.png' %}" alt="Карта">
+                    <div>
+                        <h3 class="contact_heading">Адрес:</h3>
+                        <p>Какой-то адрес</p>
+                    </div>
+                </li>
+                <li class="contact_list_item">
+                    <img class="contact_label" src="{% static 'img/contacts/clock.png' %}" alt="Часы">
+                    <div>
+                        <h3 class="contact_heading">Часы работы:</h3>
+                        <div class="opening_dates">
+                            <ul>
+                                <li>Пн-пт:</li>
+                                <li>Сб-вс:</li>
+                            </ul>
+                            <ul>
+                                <li>06:00 до 23:00</li>
+                                <li>выходной</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="contact_list_item">
+                    <img class="contact_label" src="{% static 'img/contacts/phone.png' %}" alt="Телефон">
+                    <div>
+                        <h3 class="contact_heading">Контакты:</h3>
+                        <p class="phone_contacts">Номер: +79831608151</p>
+                        <p id="email">Email: mail@mail.ru</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
 {% endblock content %}
