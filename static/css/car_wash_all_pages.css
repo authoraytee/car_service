@@ -78,7 +78,37 @@ th.prices_table_cell.prices_table_headings.wash_prices{
 
 
 
+/* sdlkjfgkl ------------------------*/
 
+h1.heading{
+    margin-bottom: 25px;
+    font-size: 1px;
+}
+
+h4.our_services{
+    font-size: 23px;
+    margin: 20px 0 20px 0;
+}
+
+ul.secvices_list{
+    list-style-type:disc;
+}
+
+li.services_list_item{
+    margin-left: 50px;
+    font-size: 20px;
+    color: #3173be;
+}  
+
+
+li.services_list_item > span{
+    color: #000;
+}
+
+p.content{
+    font-size: 18px;
+    margin: 10px 0 10px 0;
+}
 
 
 
