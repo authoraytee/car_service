@@ -2,11 +2,17 @@
 {% load static %}
 
 {% block additional_media %}
-    <link href="{% static 'css/home.css' %}" rel="stylesheet">
+    <link href="{% static 'css/stock.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
-    Скидки
-
-
+    <section class="contacts_section">
+        <div class="wrapper">
+            <h1 class="heading">Акции</h1>
+            <h4 class="content">Наш сервис предоставляет следующие акции:</h4>
+            <ul class="stocks_list">
+                <li class="stocks_list_item fee_diagnostic"><p >Бесплатная диагностика</p></li>
+            </ul>
+        </div>
+    </section>
 {% endblock content %}

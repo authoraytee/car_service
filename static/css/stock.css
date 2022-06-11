@@ -1,0 +1,41 @@
+section.contacts_section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 50px;
+    padding-bottom: 75px;
+}
+
+h4.content{
+    font-size: 20px;
+    margin: 10px 0 25px 0;
+}
+
+li.stocks_list_item{
+    display: flex;
+    align-items: flex-end;
+    justify-content: start;
+
+    height: 300px;
+    width: 300px;
+}
+
+li.stocks_list_item.fee_diagnostic{
+    background: url("/static/img/home/tire_fitting.jpg") 50% 0 no-repeat;
+    background-size: 500px 350px;
+}
+
+li.stocks_list_item.fee_diagnostic > p{
+    padding: 10px 15px 10px 15px;
+    background: #5a97dd;
+    color: #fff;
+
+    margin: 0 0 25px 25px;
+}
+
+
+
+
+
+

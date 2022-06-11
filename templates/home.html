@@ -6,7 +6,42 @@
 {% endblock %}
 
 {% block content %}
-    Home
+    <section class="home_page_main">
+        <div class="wrapper home_wrapper">
+            <ul class="advantages_list">
+                <li class="advantages_list_item">
+                    <img src="{% static 'img/home/discount.png' %}" alt="" class="advantage_image">
+                    <p class="advantage_description">У нас всегда действуют различные акции</p>
+                </li>
+                <li class="advantages_list_item">
+                    <img src="{% static 'img/home/quality.png' %}" alt="" class="advantage_image">
+                    <p class="advantage_description">Качественные услуги и сервис</p>
+                </li>
+                <li class="advantages_list_item">
+                    <img src="{% static 'img/home/pouch.png' %}" alt="" class="advantage_image">
+                    <p class="advantage_description">У нас действует бонусная система</p>
+                </li>
+                <li class="advantages_list_item">
+                    <img src="{% static 'img/home/speed.png' %}" alt="" class="advantage_image">
+                    <p class="advantage_description"> Мы быстро привезём все необходимые запчасти</p>
+                </li>
+            </ul>
+ 
+
+            <h4 class="list_heading">Услуги</h4>
+            <ul class="services_list">
+                <li class="services_list_item autoparts_item"><a href="{% url 'auto_parts' %}">Запчасти</a></li>
+                <li class="services_list_item car_wash_item"><a href="{% url 'car_wash_catalog' %}">Мойка</a></li>
+                <li class="services_list_item tire_fixing_item"><a href="{% url 'tire_fitting_catalog' %}">Ремонт шин</a></li>
+            </ul>
+
+            <h4 class="list_heading">Акции</h4>
+            <ul class="stock_list">
+                <li class="stock_list_item all_stocks"><a href="{% url 'discounts' %}">Скидки</a></li>
+                <li class="stock_list_item free_diagnostics"><a href="#">Бесплатная<br>диагностика</a></li>
+            </ul>
+        </div>
+    </section>
 
 
 {% endblock content %}
