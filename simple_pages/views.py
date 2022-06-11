@@ -7,8 +7,5 @@ def HomeView(request):
 def ContactsView(request):
     return render(request,'contacts.html')
 
-def AboutView(request):
-    return render(request,'about.html')
-
 def DiscountsView(request):
     return render(request,'discounts.html')
