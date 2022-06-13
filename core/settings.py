@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'auto_parts', # Запчасти 
     'tire_fitting', # Шиномонтаж
     'user_auto', # Машина пользователя
+    'discount_card',
 ]
 
 MIDDLEWARE = [
